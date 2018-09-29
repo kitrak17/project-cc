@@ -1,0 +1,30 @@
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<a href="#" class="clickme">Click Me</a>
+<div class="box">
+    gggggggggg ustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+
+
+
+<script>
+
+// Hide all the elements in the DOM that have a class of "box"
+$('.box').hide();
+
+// Make sure all the elements with a class of "clickme" are visible and bound
+// with a click event to toggle the "box" state
+$('.clickme').each(function() {
+    $(this).show(0).on('click', function(e) {
+        // This is only needed if your using an anchor to target the "box" elements
+        e.preventDefault();
+        
+        // Find the next "box" element in the DOM
+        $(this).next('.box').slideToggle('fast');
+    });
+});
+
+
+</script>
